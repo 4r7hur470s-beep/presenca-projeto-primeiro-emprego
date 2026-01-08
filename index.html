@@ -69,9 +69,10 @@ button:hover {
 <script>
 document.getElementById("form").addEventListener("submit", function(e){
   e.preventDefault();
-  fetch(https://script.google.com/macros/s/AKfycbzO-Kq--unGEm5mGUuIztyCysiaiYc_ewkOX-cszuQtbVGDkiekj-ojILhqghDl4zrN/exec, {
-    method: "POST",
-    body: new FormData(this)
+  fetch("https://script.google.com/macros/s/AKfycbzFNfEYxu_cr80gUNGzFit5Tn4JC7J1GvLElj-MpA_3o34eHHMZfCnx6u63Rq8-AO_O/exec", {
+  method: "POST",
+  body: new FormData(this)
+})
   }).then(() => {
     document.getElementById("msg").innerText =
       "Presença registrada com sucesso!";
@@ -82,4 +83,3 @@ document.getElementById("form").addEventListener("submit", function(e){
 
 </body>
 </html>
-
