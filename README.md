@@ -1,0 +1,85 @@
+# presenca-projeto-primeiro-emprego
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Projeto Primeiro Emprego</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef3fb;
+}
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+h1 {
+  text-align: center;
+  color: #0052cc;
+}
+p {
+  text-align: center;
+}
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+button {
+  background: #0052cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #003d99;
+}
+#msg {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Projeto Primeiro Emprego</h1>
+<p>Registro de Presença – Seminário On-line</p>
+
+<form id="form">
+<input name="nome" placeholder="Nome Completo" required>
+<input name="cpf" placeholder="CPF" required>
+<input name="email" type="email" placeholder="E-mail" required>
+<input name="curso" placeholder="Curso" required>
+<input name="demandante" placeholder="Demandante" required>
+<input name="municipio" placeholder="Município" required>
+<input name="escritorio" placeholder="Escritório Regional" required>
+<input name="admissao" type="date" required>
+
+<button type="submit">Registrar Presença</button>
+</form>
+
+<div id="msg"></div>
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  fetch(https://script.google.com/macros/s/AKfycbzO-Kq--unGEm5mGUuIztyCysiaiYc_ewkOX-cszuQtbVGDkiekj-ojILhqghDl4zrN/exec, {
+    method: "POST",
+    body: new FormData(this)
+  }).then(() => {
+    document.getElementById("msg").innerText =
+      "Presença registrada com sucesso!";
+    this.reset();
+  });
+});
+</script>
+
+</body>
+</html>
